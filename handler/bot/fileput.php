@@ -40,7 +40,7 @@ function indexCreate($botDir): void
 function copyWebhook($botDir, $currentDir): void
 {
     $sourceFile = $currentDir . "webhook.php";
-    $destFile = $botDir . "config/webhook.php";
+    $destFile = $botDir . "webhook.php";
     if (!copy($sourceFile, $destFile)) {
         echo ("\033[31m>> File config/webhook.php don`t created.\033[0m\n");
         exit;

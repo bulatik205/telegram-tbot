@@ -5,7 +5,7 @@ function webhook($token)
 {
     $dir = $dir = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://" . 
             $_SERVER['HTTP_HOST'] . 
-            rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
+            rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/index.php';
     $url = "https://api.telegram.org/bot" . $token . "/setWebhook?url=" . urlencode($dir);
 
     $ch = curl_init();
